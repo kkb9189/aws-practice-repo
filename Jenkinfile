@@ -1,16 +1,13 @@
 pipeline {
   agent any
-
   stages {
     stage('Deploy CloudFormation Stack') {
       steps {
-        script {
-          def stackName = "my-s3-bucket-stack"
-          def templateFile = "s3-bucket-template.yaml"
-          def awsRegion = "us-east-1"
+
+        
           cat "s3-bucket-template.yml"
          // sh "aws cloudformation deploy --region ${awsRegion} --stack-name ${stackName} --template-file ${templateFile}"
-        }
+  
       }
     }
   }
