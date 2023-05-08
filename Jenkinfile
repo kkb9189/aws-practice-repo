@@ -5,7 +5,7 @@ pipeline {
       steps {
 
         
-          cat "s3-bucket-template.yml"
+           sh "cat s3-bucket-template.yml"
          // sh "aws cloudformation deploy --region ${awsRegion} --stack-name ${stackName} --template-file ${templateFile}"
   
       }
