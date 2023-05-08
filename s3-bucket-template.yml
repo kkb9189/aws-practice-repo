@@ -11,4 +11,3 @@ Outputs:
   S3Bucket:
     Description: Bucket Created using this template.
     Value: !Ref S3Bucket
-	
