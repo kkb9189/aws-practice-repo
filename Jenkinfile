@@ -5,7 +5,7 @@ pipeline {
       steps {
         script {
           def stackName = "my-s3-bucket-stack"
-          def templateFile = "s3-bucket-template.yaml"
+          def templateFile = "s3-bucket-template.yml"
           def awsRegion = "us-east-1"
 
           sh "aws cloudformation deploy --region ${awsRegion} --stack-name ${stackName} --template-file ${templateFile}"
