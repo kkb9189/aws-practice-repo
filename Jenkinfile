@@ -9,6 +9,7 @@ pipeline {
           def awsRegion = "us-east-1"
 
           sh "aws cloudformation deploy --region ${awsRegion} --stack-name ${stackName} --template-file ${templateFile}"
+          aws cloudformation describe-stack-events --stack-name my-s3-bucket-stack
         }
       }
     }
