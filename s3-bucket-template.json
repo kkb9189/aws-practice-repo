@@ -1,8 +1,0 @@
-{
-  "Resources": {
-      "S3B4T208": {
-          "Type": "AWS::S3::Bucket",
-          "Properties": {"BucketName": "divisha-my-love-23Oct21"}
-      }
-  }
-}

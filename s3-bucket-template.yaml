@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyS3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: divisha-my-love-23oct21-radhe-radhe
+
+  MyStack:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL: 'https://s3.amazonaws.com/my-bucket/s3-bucket-template.yaml'
+      Parameters:
+        BucketName: !Ref MyS3Bucket
+      RoleARN: arn:aws:iam::154616906674:role/for-cft-template
