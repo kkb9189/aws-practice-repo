@@ -3,9 +3,7 @@ pipeline {
   stages {
     stage('Deploy CloudFormation Stack') {
       steps {
-        script {
           sh "aws cloudformation create-stack --stack-name radha-s3-bucket --template-body file://s3-bucket-template.yaml --region 'us-east-1'"
-          aws cloudformation describe-stack-events --stack-name my-s3-bucket-stack-radha
         }
       }
     }
